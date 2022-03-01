@@ -181,7 +181,7 @@ namespace argos {
    /****************************************/
    /****************************************/
    
-   const CVector3 CCI_PiPuckOmnidirectionalCameraSensor::POSITION_OFFSET = CVector3(0.0, 0.0, 0.05);;
+   const CVector3 CCI_PiPuckOmnidirectionalCameraSensor::POSITION_OFFSET = CVector3(0.0, 0.0, 0.0925);
    const Real CCI_PiPuckOmnidirectionalCameraSensor::DEFAULT_ROTATION = 0.0;
    const CVector2 CCI_PiPuckOmnidirectionalCameraSensor::DEFAULT_RESOLUTION = CVector2(640, 480);
    const CVector2 CCI_PiPuckOmnidirectionalCameraSensor::DEFAULT_FOCAL_LENGTH = CVector2(1000, 1000);
