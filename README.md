@@ -1,5 +1,5 @@
 # The omni-directional camera plugin for the Pi-Puck
-This repository is an external plugin for use with the Pi-Puck in ARGoS3. It provides an omnidirectional camera sensor capable of locating Apriltags and detecting nearby LEDs.
+The [Pi-Puck omni-directional camera repository](https://github.com/iridia-ulb/argos3-pipuck-omnidirectional-camera) contains external plugins for use with the Pi-Puck in ARGoS3. These plugins provides an omnidirectional camera sensor capable of locating Apriltags and detecting nearby LEDs.
 
 ## Quick start
 
@@ -20,7 +20,7 @@ argos3 -c testing/test_omnidirectional_camera.argos
 ```
 
 ## Current state of the plugin
-At the time of writing, the sensor is capable of detecting tags directly in front of it but the mirror and its optical properties have not been implemented. Incorporating the mirror into this plugin requires work on both the hardware and software implementations.
+At the time of writing, the sensor is capable of detecting tags directly in front of it but the mirror and its optical properties have not been implemented. Incorporating the mirror into this plugin requires work on both the hardware and simulation implementations.
 
 ### Hardware
 Assuming the Apriltags library is capable of detecting tags in the distorted image from the reflection of the mirror, the first step will be to update the corner and center pixel locations of each detected tag such that they reflect how the tag would have been detected through a normal camera. This should be done after [Line 266 of hardware / pipuck_omnidirectional_camera_default_sensor.cpp](https://github.com/iridia-ulb/argos3-pipuck-omnidirectional-camera/blob/4f72915eb284e3d92e693d7c0e10c80e78f2c6d8/src/plugins/robots/pi-puck/hardware/pipuck_omnidirectional_camera_default_sensor.cpp#L266). Specifically, the coordinates in `ptDetection->p` and `ptDetection->c` need to be updated.
